@@ -3,7 +3,7 @@ class RegistrationsController < Devise::RegistrationsController
   # ovverride #create to respond to AJAX with a partial
   def create
     build_resource
-
+    
     if resource.save
       if resource.active_for_authentication?
         sign_in(resource_name, resource)
@@ -18,9 +18,9 @@ class RegistrationsController < Devise::RegistrationsController
     else
       clean_up_passwords resource
       #TODO - make sure this adjusted code works with sending out invites
-      render(:partial => 'email_capture', :action => :new, :layout => !request.xhr?)
+      render partial: 'email_capture', action: :new, layout: !request.xhr?
       #The original template code:
-      #render :action => :new, :layout => !request.xhr?
+      # render :action => :new, :layout => !request.xhr?
     end
   end
 
