@@ -1,32 +1,34 @@
 source 'https://rubygems.org'
-gem 'rails', '3.2.11'
-gem 'sqlite3'
+gem 'rails', '~> 3.2.13'
+gem 'sqlite3', '~> 1.3.7'
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
-  gem 'uglifier', '>= 1.0.3'
+  gem 'sass-rails',   '~> 3.2.6'
+  gem 'coffee-rails', '~> 3.2.2'
+  gem 'uglifier', '~> 2.0.1'
 end
 group :development do
-  gem 'hpricot', '0.8.6'
-  gem 'ruby_parser', '3.1.1'
+  gem 'hpricot', '~> 0.8.6'
+  gem 'ruby_parser', '~> 3.1.3'
+  gem 'haml-rails', '~> 0.4'
+end
+group :test do
+  gem 'email_spec', '~> 1.4.0'
+  gem 'capybara', '~> 2.1.0'
+  gem 'launchy', '~> 2.3.0'
+  gem 'database_cleaner', '0.9.1'
+  gem 'cucumber-rails', '~> 1.3.1'
 end
 
-gem 'jquery-rails'
-gem "haml", ">= 3.1.6"
-gem "haml-rails", ">= 0.3.4", :group => :development
-gem "rspec-rails", ">= 2.10.1", :group => [:development, :test]
-gem "factory_girl_rails", ">= 3.3.0", :group => [:development, :test]
-gem "email_spec", ">= 1.2.1", :group => :test
-gem "cucumber-rails", ">= 1.3.0", :group => :test, :require => false
-gem "capybara", ">= 1.1.2", :group => :test
-gem "database_cleaner", ">= 0.8.0", :group => :test
-gem "launchy", ">= 2.1.0", :group => :test
-gem "hominid"
-gem "devise", ">= 2.1.0"
-gem "devise_invitable", ">= 1.0.2"
-gem "cancan", ">= 1.6.7"
-gem "rolify", ">= 3.1.0"
-gem "google_visualr", ">= 2.1.2"
-gem "jquery-datatables-rails", ">= 1.10.0"
-gem "bootstrap-sass", ">= 2.0.3"
-gem "simple_form"
+gem 'jquery-rails', '~> 2.0.3' # this gem causes AJAX submit issues when updated
+gem 'haml', '~> 4.0.2'
+gem 'rspec-rails', '~> 2.13.0', :group => [:development, :test]
+gem 'factory_girl_rails', '~> 4.2.1', :group => [:development, :test]
+gem 'hominid', '~> 3.0.5'
+gem 'devise', '~> 2.2.3'
+gem 'devise_invitable', '~> 1.1.7'
+gem 'cancan', '~> 1.6.9'
+gem 'rolify', '~> 3.2.0'
+gem 'google_visualr', '~> 2.1.7'
+gem 'jquery-datatables-rails', '~> 1.11.2'
+gem 'bootstrap-sass', '~> 2.3.1.0'
+gem 'simple_form', '~> 2.1.0'
