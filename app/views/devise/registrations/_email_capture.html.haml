@@ -1,0 +1,10 @@
+= simple_form_for resource, :as => resource_name, :url => registration_path(resource_name) , :html => {:class => 'form-inline' } do |f|
+  %label{:style => "display: #{"#{@user.errors.any? ? 'none' : 'block'}"};"} Launching soon.
+  - if @user.errors.any?
+    .alert.alert-error Please enter a valid email
+  .input-prepend
+    %span.add-on
+      %i.icon-envelope
+    = f.text_field :email, :placeholder => 'Your email address...'
+  = f.submit "Notify Me", :class => "btn btn-primary", :id => 'invitation_button'
+  %p.help-block No spam. Just a heads up when we're ready for you.

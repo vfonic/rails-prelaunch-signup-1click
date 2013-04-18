@@ -6,6 +6,11 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
   gem 'uglifier', '>= 1.0.3'
 end
+group :development do
+  gem 'hpricot', '0.8.6'
+  gem 'ruby_parser', '3.1.1'
+end
+
 gem 'jquery-rails'
 gem "haml", ">= 3.1.6"
 gem "haml-rails", ">= 0.3.4", :group => :development
