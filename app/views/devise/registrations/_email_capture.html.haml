@@ -1,7 +1,14 @@
 = simple_form_for resource, :as => resource_name, :url => registration_path(resource_name) , :html => {:class => 'form-inline' } do |f|
-  %label{:style => "display: #{"#{@user.errors.any? ? 'none' : 'block'}"};"} Launching soon.
+  = f.label :email, "Launching soon.<br/>Be the first to know.".html_safe, style: "display: #{"#{@user.errors.any? ? 'none' : 'block'}"};"
   - if @user.errors.any?
-    .alert.alert-error Please enter a valid email
+    - email_taken = false
+    - @user.errors.full_messages.each do |msg|
+      - if msg == "Email has already been taken"
+        - email_taken = true
+    - if email_taken
+      .alert.alert-success You already signed up for Do The Life
+    - else
+      .alert.alert-error Please enter a valid email
   .input-prepend
     %span.add-on
       %i.icon-envelope
