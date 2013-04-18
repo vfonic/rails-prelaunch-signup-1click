@@ -1,3 +1,10 @@
 #thanks
   %h1> Thank You!
   Like what we're up to? Tell your colleagues!
+  #share{ style: "display:inline-block;" }
+    .tw-share{ style: "vertical-align: top; margin-top: 5px; display: inline-block; width: 110px" }
+      %script{:src => "http://platform.twitter.com/widgets.js", :type => "text/javascript"}
+      %a{ href: "https://twitter.com/share", class: "twitter-share-button", "data-url" => "http://dothelife.com", "data-text" => "I'm first to Do The Life.", "data-via" => "dothelife", "data-size" => "large", "data-hashtags" => "dothelife", style: "width: 110px" }
+        Tweet
+    .fb-share{ style: "vertical-align: top; margin-top: 5px; display: inline-block;" }
+      = facebook_like
