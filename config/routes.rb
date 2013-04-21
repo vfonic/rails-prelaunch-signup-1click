@@ -1,4 +1,5 @@
 RailsPrelaunchSignup::Application.routes.draw do
+  match '/users/sign_in' => redirect("/")
   authenticated :user do
     root :to => 'home#index'
   end
