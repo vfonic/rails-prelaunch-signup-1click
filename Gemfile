@@ -27,6 +27,7 @@ group :development, :test do
 end
 group :production do
   gem 'pg', '0.14.1'
+  gem 'google-analytics-rails', '0.0.4'
 end
 
 gem 'jquery-rails', '~> 2.0.3' # this gem causes AJAX submit issues when updated
