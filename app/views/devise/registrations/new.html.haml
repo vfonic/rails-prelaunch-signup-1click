@@ -9,9 +9,20 @@
       Let me organize the life for you.
       %br/
       You just live it. You just...DO!
+      .countdown{ style: "margin: auto" }
+        :javascript
+          var test1 = new Countdown({
+                              year    : 2013, 
+                              month   : 6, 
+                              day     : 28, 
+                              hour    : 0,
+                              ampm    : "am",
+                              minute  : 0, 
+                              second  : 0     // <- no comma on last item!!
+                          });
   #well.row.well
     .span4.offset2.text_only
-      Do The Life is a productivity application that allows you to create repeatable tasks to achieve long term goals. It automatically finds suitable time slot for each task by integrating with your existing calendars. Do The Life resolves all possible conflicts with events from your calendar and learns about your lifestyle in order to create the best and most productive schedule just the way you want.
+      Do The Life resolves all possible conflicts with events from your calendar and learns about your lifestyle in order to create the best and most productive schedule just the way you want. It automatically finds suitable time slot for each task by integrating with your existing calendars. 
     .span4
       #request-invite.form-inline
         = render 'email_capture'
