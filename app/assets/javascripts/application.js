@@ -26,6 +26,7 @@ $('document').ready(function() {
   // use AJAX to submit the "request invitation" form
   $('#invitation_button').live('click', function() {
     $(this).attr("disabled", "disabled");
+    $(this).val("Wait for it...");
     var email = $('form #user_email').val();
     var password = $('form #user_password').val();
     $.ajax({
