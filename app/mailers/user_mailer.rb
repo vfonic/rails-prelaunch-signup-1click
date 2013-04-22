@@ -1,5 +1,5 @@
 class UserMailer < ActionMailer::Base
-  default :from => "donotreply@dothelife.com"
+  default :from => '"Do The Life" <donotreply@dothelife.com>'
   
   def welcome_email(user)
     subject     = "Welome to Do The Life!"
