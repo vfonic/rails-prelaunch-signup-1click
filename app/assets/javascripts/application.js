@@ -25,6 +25,7 @@ $('document').ready(function() {
   
   // use AJAX to submit the "request invitation" form
   $('#invitation_button').live('click', function() {
+    $(this).attr("disabled", "disabled");
     var email = $('form #user_email').val();
     var password = $('form #user_password').val();
     $.ajax({
@@ -33,6 +34,7 @@ $('document').ready(function() {
       //Allow for gmail style aliases (e.g. user+foo@example.com)
       data: {"user[email]": email, "user[password]": password},
       success: function(data) {
+        $("#invitation_button").removeAttr("disabled");
         $('#request-invite').html(data);
         //Not using the social media share modal, so yank that out
         //loadSocial();
