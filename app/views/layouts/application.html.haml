@@ -5,8 +5,13 @@
     %meta{"http-equiv" => "X-UA-Compatible", :content => "IE=edge,chrome=1"}
     %meta{:name => "viewport", :content => "width=device-width, initial-scale=1, maximum-scale=1"}
     %title= content_for?(:title) ? yield(:title) : "Do The Life"
-    %meta{:content => "", :name => "description"}
-    %meta{:content => "", :name => "author"}
+    %meta{name: "author", content: "Viktor Fonic"}
+    %meta{name: "description", content: "Do The Life resolves all possible conflicts with events from your calendar and learns about your lifestyle in order to create the best and most productive schedule just the way you want. It automatically finds suitable time slot for each task by integrating with your existing calendars."}
+    %meta{name: "keywords", content: "Do The Life, DoTheLife, productivity, schedule, calendar, app, application, organizer, organizing, life, management, project management, meeting, meeting invites, productivity app, repeatable tasks, events, event"}
+    %meta{name: "og:title", content: "Do The Life"}
+    %meta{name: "og:site_name", content: "Do The Life"}
+    %meta{name: "og:description", content: "Do The Life resolves all possible conflicts with events from your calendar and learns about your lifestyle in order to create the best and most productive schedule just the way you want. It automatically finds suitable time slot for each task by integrating with your existing calendars."}
+    %meta{name: "og:url", content: "dothelife.com"}
     = stylesheet_link_tag    "application", :media => "all"
     = javascript_include_tag "application"
     = csrf_meta_tags
