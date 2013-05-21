@@ -172,9 +172,9 @@ $wellBackground:                  $grayLighter;
 $navbarCollapseWidth:             979px;
 $navbarCollapseDesktopWidth:      $navbarCollapseWidth + 1;
 
-$navbarHeight:                    50px;
-$navbarBackgroundHighlight:       $textColor;
-$navbarBackground:                $textColor;
+$navbarHeight:                    40px;
+$navbarBackgroundHighlight:       $white;
+$navbarBackground:                $grayLighter;
 $navbarBorder:                    darken($navbarBackground, 5%);
 
 $navbarText:                      $white;
@@ -184,7 +184,7 @@ $navbarLinkColorActive:           $linkColor;
 $navbarLinkBackgroundHover:       transparent;
 $navbarLinkBackgroundActive:      darken($navbarBackground, 5%);
 
-$navbarBrandColor:                $navbarLinkColor;
+$navbarBrandColor:                $gray;
 
 // Inverted navbar
 $navbarInverseBackground:                $green;
@@ -226,8 +226,8 @@ $warningText:             $yellow;
 $warningBackground:       desaturate(lighten($yellow,45%),30%);
 $warningBorder:           transparent;
 
-$errorText:               $red;
-$errorBackground:         desaturate(lighten($red,45%),30%);
+$errorText:               desaturate(lighten($red,45%),30%);
+$errorBackground:         $red;
 $errorBorder:             transparent;
 
 $successText:             $green;
@@ -246,10 +246,10 @@ $tooltipBackground:       $blueDark;
 $tooltipArrowWidth:       5px;
 $tooltipArrowColor:       $tooltipBackground;
 
-$popoverBackground:       $blueDark;
+$popoverBackground:       $white;
 $popoverArrowWidth:       10px;
-$popoverArrowColor:       $blueDark;
-$popoverTitleBackground:  $blueDark;
+$popoverArrowColor:       $white;
+$popoverTitleBackground:  $grayLighter;
 
 // Special enhancement for popovers
 $popoverArrowOuterWidth:  $popoverArrowWidth + 1;
