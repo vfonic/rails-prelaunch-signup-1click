@@ -30,3 +30,5 @@ gem 'jquery-datatables-rails', '~> 1.11.2'
 gem 'bootstrap-sass', '2.3.1.0'
 gem 'simple_form', '~> 2.1.0'
 gem 'thin', '~> 1.5.0'
+gem 'delayed_job_active_record', '0.4.4' # rails generate delayed_job:active_record
+gem 'heroku_delayed_job_autoscale', '0.0.7'
