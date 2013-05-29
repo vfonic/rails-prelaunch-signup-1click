@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  include HerokuDelayedJobAutoscale::Autoscale
   rolify
   # Include default devise modules. Others available are:
   # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable
@@ -51,6 +52,6 @@ class User < ActiveRecord::Base
   private
 
   def send_welcome_email
-    UserMailer.welcome_email(self).deliver
+    UserMailer.delay.welcome_email(self)
   end
 end
