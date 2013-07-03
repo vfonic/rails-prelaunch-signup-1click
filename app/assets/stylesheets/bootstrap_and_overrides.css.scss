@@ -10,11 +10,11 @@
 // -------------------------
 $black:                 #000;
 $grayDarker:            #222;
-$grayDark:              #7b8a8b;
+$grayDark:              #7B8A8B;
 $gray:                  #95A5A6;
-$grayLight:             #b4bcc2;
-$grayLighter:           #ECF0F1;
-$white:                 #fff;
+$grayLight:             #B4BCC2;
+$grayLighter:           #F7F7F7;
+$white:                 #FFFFFF;
 
 
 // Accent colors
@@ -23,9 +23,9 @@ $blue:                  #3498DB;
 $blueDark:              #2C3E50;
 $green:                 #18BC9C;
 $red:                   #E74C3C;
-$yellow:                #e6bb0d;
+$yellow:                #e6BB0D;
 $orange:                #F39C12;
-$pink:                  #ff6699;
+$pink:                  #FF6699;
 $purple:                #8E44AD;
 
 
@@ -69,9 +69,9 @@ $paddingLarge:          18px 36px; // 44px
 $paddingSmall:          2px 12px;  // 26px
 $paddingMini:           1px 8px;   // 24px
 
-$baseBorderRadius:      6px;
-$borderRadiusLarge:     10px;
-$borderRadiusSmall:     3px;
+$baseBorderRadius:      0;
+$borderRadiusLarge:     0;
+$borderRadiusSmall:     0;
 
 
 // Tables
@@ -84,26 +84,26 @@ $tableBorder:                       #ddd; // table and cell border
 // Buttons
 // -------------------------
 $btnBackground:                     $grayLight;
-$btnBackgroundHighlight:            lighten($btnBackground, 10%);
+$btnBackgroundHighlight:            lighten($btnBackground, 5%);
 $btnBorder:                         #ddd;
 
 $btnPrimaryBackground:              $textColor;
-$btnPrimaryBackgroundHighlight:     lighten($btnPrimaryBackground, 10%);
+$btnPrimaryBackgroundHighlight:     lighten($btnPrimaryBackground, 5%);
 
 $btnInfoBackground:                 $blue;
-$btnInfoBackgroundHighlight:        lighten($btnInfoBackground, 10%);
+$btnInfoBackgroundHighlight:        lighten($btnInfoBackground, 5%);
 
 $btnSuccessBackground:              $green;
-$btnSuccessBackgroundHighlight:     lighten($btnSuccessBackground, 10%);
+$btnSuccessBackgroundHighlight:     lighten($btnSuccessBackground, 5%);
 
 $btnWarningBackground:              $orange;
-$btnWarningBackgroundHighlight:     lighten($btnWarningBackground, 10%);
+$btnWarningBackgroundHighlight:     lighten($btnWarningBackground, 5%);
 
 $btnDangerBackground:               $red;
-$btnDangerBackgroundHighlight:      lighten($btnDangerBackground, 10%);
+$btnDangerBackgroundHighlight:      lighten($btnDangerBackground, 5%);
 
 $btnInverseBackground:              $grayDarker;
-$btnInverseBackgroundHighlight:     lighten($btnInverseBackground, 10%);
+$btnInverseBackgroundHighlight:     lighten($btnInverseBackground, 5%);
 
 
 // Forms
@@ -164,7 +164,7 @@ $horizontalComponentOffset:       180px;
 
 // Wells
 // -------------------------
-$wellBackground:                  $grayLighter;
+$wellBackground:                  $white;
 
 
 // Navbar
@@ -292,6 +292,18 @@ $fluidGridGutterWidth1200:     percentage($gridGutterWidth1200/$gridRowWidth1200
 $fluidGridColumnWidth768:      percentage($gridColumnWidth768/$gridRowWidth768);
 $fluidGridGutterWidth768:      percentage($gridGutterWidth768/$gridRowWidth768);
 
+@mixin override_gradient_vertical($color) {
+  background-color:$color;
+  background-image: none;
+  background-image: none;
+  background-image: none;
+  background-image: none;
+  background-image: none;
+  background-image: none;
+  background-repeat: no-repeat;
+  filter: none;
+}
+
 @import "bootstrap";
 body { padding-top: 45px; }
 @import "bootstrap-responsive";
@@ -300,9 +312,7 @@ body { padding-top: 45px; }
   background-color: #fff;
   padding: 20px;
   margin: 0 -20px; /* negative indent the amount of the padding to maintain the grid system */
-  -webkit-border-radius: 0 0 6px 6px;
-  -moz-border-radius: 0 0 6px 6px;
-  border-radius: 0 0 6px 6px;
+  @include border-radius(0);
   -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
   -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
   box-shadow: 0 1px 2px rgba(0,0,0,.15);
@@ -314,6 +324,7 @@ body { padding-top: 45px; }
   .hero-unit {
     background: url(bg.png);
     padding: 40px;
+    @include border-radius(0);
   }
   
   h1 {
@@ -403,4 +414,12 @@ body { padding-top: 45px; }
 footer {
   margin: 16px;
   font-size: 12px;
+}
+
+.btn-success {
+  @include override_gradient_vertical($btnSuccessBackground);
+}
+
+.navbar-inner {
+  @include override_gradient_vertical($grayLighter);
 }
