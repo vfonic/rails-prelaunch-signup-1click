@@ -15,9 +15,9 @@ Notes:
 * If you want ongoing support, I strongly recommend you fork the "original project":http://railsapps.github.com/rails-prelaunch-signup and merge in my additions
 
 Screenshots:
-!https://github.com/chadokruse/rails-prelaunch-signup-1click/raw/master/screenshot-main.png(Landing Page)!
-!https://github.com/chadokruse/rails-prelaunch-signup-1click/raw/master/screenshot-error.png(Error State)!
-!https://github.com/chadokruse/rails-prelaunch-signup-1click/raw/master/screenshot-success.png(Success State)!
+!https://github.com/vfonic/rails-prelaunch-signup-1click/raw/master/screenshot-main.png(Landing Page)!
+!https://github.com/vfonic/rails-prelaunch-signup-1click/raw/master/screenshot-error.png(Error State)!
+!https://github.com/vfonic/rails-prelaunch-signup-1click/raw/master/screenshot-success.png(Success State)!
 
 h2. Credits
 
