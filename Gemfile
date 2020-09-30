@@ -19,7 +19,7 @@ group :production do
   gem 'google-analytics-rails', '0.0.4'
 end
 
-gem 'jquery-rails', '~> 2.0.3' # this gem causes AJAX submit issues when updated
+gem 'jquery-rails', '~> 3.1.3' # this gem causes AJAX submit issues when updated
 gem 'haml', '~> 4.0.2'
 gem 'devise', '~> 2.2.3'
 gem 'devise_invitable', '~> 1.1.7'
